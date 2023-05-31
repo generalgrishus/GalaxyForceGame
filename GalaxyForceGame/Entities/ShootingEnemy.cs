@@ -18,7 +18,6 @@ namespace GalaxyForceGame.Entities
             : base(texture)
         {
             var rndValue = new Random();
-            Position = new Vector2(rndValue.Next(0, Game1.ScreenWidth - Texture.Width), -Texture.Height);
             Speed = rndValue.Next(3, 6);
             shoodSpeed = (float)rndValue.Next(1, 3) - 0.1f;
         }

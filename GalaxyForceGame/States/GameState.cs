@@ -200,17 +200,17 @@ namespace GalaxyForceGame.States
                         Difficulty = 0.7f;
                         break;
                     }
-                case 10:
+                case 7:
                     {
                         Difficulty = 0.5f;
                         break;
                     }
-                case 30:
+                case 20:
                     {
                         Difficulty = 0.4f;
                         break;
                     }
-                case 100:
+                case 50:
                     {
                         Difficulty = 0.3f;
                         break;
@@ -277,7 +277,7 @@ namespace GalaxyForceGame.States
                     }
                 case 1:
                     {
-                        if (Score.AmountOfKills >= 30)
+                        if (Score.AmountOfKills >= 15)
                         {
                             SpawnDiagonalEnemy();
                             break;

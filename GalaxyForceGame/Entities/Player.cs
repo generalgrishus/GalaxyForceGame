@@ -69,7 +69,8 @@ namespace GalaxyForceGame.Entities
 
         private void UpdateTimers(GameTime gameTime)
         {
-            UltimateTime += (float)gameTime.ElapsedGameTime.TotalSeconds;
+            if (CanUltimate)            
+                UltimateTime += (float)gameTime.ElapsedGameTime.TotalSeconds;            
             GodModeTime += (float)gameTime.ElapsedGameTime.TotalSeconds;
             UltimateShootTimer += (float)gameTime.ElapsedGameTime.TotalSeconds;
         }
@@ -77,7 +78,7 @@ namespace GalaxyForceGame.Entities
         private void UseUltimate(GameTime gameTime, List<Sprite> sprites)
         {
             if (CanUltimate)
-            {
+            {               
                 if (UltimateTime < 5f)
                 {
                     if (UltimateShootTimer > 0.25f)

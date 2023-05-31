@@ -7,7 +7,7 @@ namespace GalaxyForceGame.Entities
 {    
     public class DiagonalEnemy : ShootingEnemy
     {
-        private float shoodSpeed;
+        private float shootSpeed;
 
         public bool IsLeft { get; set; }
 
@@ -32,7 +32,7 @@ namespace GalaxyForceGame.Entities
                         break;
                     }
             }                       
-            shoodSpeed = (float)rndValue.Next(1, 2) - 0.5f;
+            shootSpeed = 0.5f;
             Speed = 7;
         }
 
@@ -43,7 +43,7 @@ namespace GalaxyForceGame.Entities
             CheckOnCollisions(sprites);
             GetDiagonalMovement();
 
-            if (shootPeriod > shoodSpeed)
+            if (shootPeriod > shootSpeed)
             {
                 shootPeriod = 0;
                 AddEnemyBullet(sprites);
